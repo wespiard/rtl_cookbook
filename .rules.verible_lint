@@ -1,0 +1,5 @@
+-port-name-suffix
+-instance-shadowing
+-explicit-begin
+-parameter-name-style
+-dff-name-style

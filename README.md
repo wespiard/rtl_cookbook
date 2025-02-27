@@ -1,1 +1,171 @@
-# rtl_cookbook
+# RTL Cookbook
+
+Compilation of useful RTL modules written in SystemVerilog.
+
+The goal is to include explanations similar to those found in the old [Altera Advanced Synthesis Cookbook](https://www.intel.com/content/www/us/en/content-details/654474/advanced-synthesis-cookbook.html), but to include explanations about primitive mappings that are more relevant for today's FPGAs, e.g., AMD/Xilinx Ultrascale+, etc.
+
+## Progress
+
+I will track my progress here, outlining in a similar fashion as the Altera cookbook.
+
+- [ ] Arithmetic
+  - [ ] Basic Addition
+  - [ ] Ternary Addition
+  - [ ] Grouping Ternary Adders
+  - [ ] Combinational Adders
+  - [ ] Double Addsub/ Basic Addsub
+  - [ ] Two’s Complement Arithmetic Review
+  - [ ] Traditional ADDSUB Unit
+  - [ ] Compressors (Carry Save Adders)
+  - [ ] Compressor Width 6:3
+  - [ ] Compressor Width 3:2
+  - [ ] Compressor Width 12:4
+  - [ ] Compressor Width 36:6
+  - [ ] Compressor Width 64:7
+  - [ ] Combining Compressors (Compressor Width 4:2)
+  - [ ] Bit Population Count
+  - [ ] Splitting Adder Chains
+  - [ ] Pipelined Adder Chains
+  - [ ] Carry Select Adders
+  - [ ] Adder Trees
+  - [ ] Basic Multiplication
+  - [ ] Multiplication With Rotate and Shift Modes
+  - [ ] High-Speed LCell-Based Multiplication
+  - [ ] Multiplication of Large Integers (Karatsuba Algorithm)
+  - [ ] Division (Unsigned Integer)
+  - [ ] CORDIC
+- [ ] Floating Point Tricks
+  - [ ] Floating Point to Fixed Point Conversion
+  - [ ] Approximate Square Root
+  - [ ] Approximate Inverse Square Root
+  - [ ] Approximate Floating Point Divide (Single Precision)
+- [ ] Translation and Format Conversion
+  - [ ] One-Hot Decoder (Binary to One-Hot)
+  - [ ] One-Hot to Binary
+  - [ ] Mask Generation
+  - [ ] Binary-to-Gray Conversion
+  - [ ] Gray-To-Binary Conversion
+  - [ ] Seven Segment Display Driver
+  - [ ] Binary-to-ASCII Hexadecimal Conversion
+  - [ ] ASCII to 32 Character Liquid Crystal Display (LCD)
+  - [ ] ASCII Hexadecimal-to-Binary Conversion
+  - [ ] Binary-to-Decimal/Binary-Coded Decimal Adders
+- [ ] Video
+  - [ ] YCbCr (4:4:4) to RGB Conversion
+  - [ ] RGB to Hue Conversion
+  - [ ] Sum of Absolute Difference (SAD)
+  - [ ] VGA Monitor Control
+  - [ ] Character Display
+- [ ] Arbitration
+  - [ ] Bitscan (Priority Masking)
+  - [ ] Arbiters with Fairness
+  - [ ] Priority Encoding
+  - [ ] Channel Arbiter
+- [ ] Multiplexing
+  - [ ] Basic Multiplexing (Binary Encoded)
+  - [ ] Decode/Select Multiplexing
+  - [ ] If/Else Multiplexing (?: Multiplexing)
+  - [ ] Priority Multiplexing
+  - [ ] 8-to-1 Multiplex Building Blocks
+  - [ ] Barrel Shift
+  - [ ] Use of Register Secondary Signals for Multiplexing
+  - [ ] Bus Multiplexing
+  - [ ] Pipelined Bus Multiplexing
+  - [ ] Word Muxing 20:5
+  - [ ] Word Muxing 20:8
+- [ ] Comparison and Adder Detection
+  - [ ] Bus Equality ( A == B )
+  - [ ] Mapping Wide Single-Output Functions to the Carry Chain
+  - [ ] Equal to Constant
+  - [ ] Less than Constant
+  - [ ] Address in Range Comparison (LOWER <= addr < UPPER)
+  - [ ] Match or Inverse Match
+  - [ ] Min and Max / Variable Sign Comparison
+- [ ] Storage
+  - [ ] Register Banks
+  - [ ] 24-Bit/16-Bit Stream Buffers (RGB/Memory Buffer)
+  - [ ] RAM-Based Shift Register
+  - [ ] RAM-Based Shift Register (MLAB Variant)
+  - [ ] FIFO (Dual Clock)
+  - [ ] Dual Clock FIFO (MLAB Variant)
+  - [ ] Simple Quad Port RAM
+  - [ ] Ternary Content Addressable Memory (TCAM)
+  - [ ] Register-Based Ternary CAM
+  - [ ] RAM-Based Ternary CAM
+  - [ ] Backpressure Skid Buffer
+  - [ ] Register Based Buffer FIFO
+- [ ] Counters
+  - [ ] Basic Binary Counter
+  - [ ] Up/Down Counter
+  - [ ] Seconds Timer
+  - [ ] System Timer
+  - [ ] Modulus Counter with Lookahead
+  - [ ] Basic Gray Counter and Gray Lookahead
+- [ ] Communication
+  - [ ] 8B10B Encoder/ Decoder
+  - [ ] Chaining 8B10B coders
+  - [ ] Universal Asynchronous Receiver Transmitter (UART)
+  - [ ] Interface to Parallax Global Positioning System (GPS) Receiver
+  - [ ] Gearbox
+  - [ ] Scrambler
+  - [ ] Interlaken
+  - [ ] TX Lane Implementation
+  - [ ] Gearbox
+  - [ ] 64/67-Bit Encoding
+  - [ ] Interlaken Scrambler
+  - [ ] CRC32
+  - [ ] Framing schedule
+  - [ ] RX Lane Implementation
+  - [ ] Gearbox
+  - [ ] Word Alignment
+  - [ ] Decode 67/64
+  - [ ] Scrambler
+  - [ ] Framing schedule
+  - [ ] CRC32
+  - [ ] Lane Test Environment
+- [ ] Cyclic Redundancy Check
+  - [ ] CRC XOR Decomposition
+  - [ ] CRC-16 Fixed Data Width
+  - [ ] CRC-24 Fixed Width
+  - [ ] CRC-32 Fixed Data Width
+  - [ ] CRC-32C (Castagnoli) Fixed Width
+  - [ ] CRC-32 Variable Data Width (Residues)
+  - [ ] CRC-32 Ethernet FCS
+  - [ ] CRC Decomposition and Pipeline
+- [ ] Error Correction Codes
+  - [ ] 64/72-Bit ECC Encoder/ Decoder
+  - [ ] 64/72-Bit ECC Dual-Port Internal RAM
+  - [ ] ECC 32/39-Bit Variation
+  - [ ] ECC 16/22-Bit Variation
+  - [ ] ECC 8/13-Bit Variation
+  - [ ] ECC 2/6-Bit Variation
+  - [ ] Reed-Solomon Forward Error Correction (FEC)
+  - [ ] Reed-Solomon Transmitter
+  - [ ] Reed-Solomon Receiver
+  - [ ] Galois Field Multiplication
+- [ ] Random and Pseudorandom Functions
+  - [ ] Linear Feedback Shift Register
+  - [ ] Built-In Logic Block Observer
+  - [ ] C Library Random Number Generator
+  - [ ] True Random Numbers
+  - [ ] Race Condition-Based True Random Numbers
+  - [ ] Word Stream Scrambling
+- [ ] Cryptography
+  - [ ] Data Encryption Standard
+  - [ ] Triple DES
+  - [ ] UNIX Password Encryption
+  - [ ] Advanced Encryption Standard/ Rijndael
+  - [ ] The Rijndael S-BOX/sub_bytes
+  - [ ] Rijndael shift_rows
+  - [ ] Rijndael mix_columns and Round Keying
+  - [ ] Rijndael Key Evolution
+  - [ ] Rijndael 128 Encipher
+  - [ ] Rijndael 128 Decipher
+  - [ ] Rijndael 256-Bit Key Size (AES 256)
+  - [ ] Rijndael 192-Bit Key Size (AES 192)
+  - [ ] RC4 Stream
+  - [ ] Secure Hash Algorithm
+- [ ] Synchronization
+  - [ ] System Reset Control
+  - [ ] Clock Multiplexing
+  - [ ] Synchronizer Chain

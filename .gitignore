@@ -1,0 +1,15 @@
+# VS Code
+.vscode/
+
+# Vivado
+.Xil/
+*.jou
+*.log
+*_proj/
+
+# Verilator
+obj_dir/
+
+
+# Synplify
+*.prj
